@@ -5,7 +5,7 @@
             [deps-deploy.deps-deploy :as deps-deploy]))
 
 (def lib 'io.github.tesujimath/limabean-contrib)
-(def version "0.1.0-SNAPSHOT")
+(def version "0.1.0")
 (def main 'limabean.contrib.main)
 (def class-dir "target/classes")
 ;; mvn-local-repo must be an absolute path outside of clj

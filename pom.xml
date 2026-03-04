@@ -4,7 +4,7 @@
   <packaging>jar</packaging>
   <groupId>io.github.tesujimath</groupId>
   <artifactId>limabean-contrib</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.0</version>
   <name>limabean-contrib</name>
   <dependencies>
     <dependency>
@@ -80,6 +80,6 @@
     <url>https://github.com/tesujimath/limabean-contrib</url>
     <connection>scm:git:git://github.com/tesujimath/limabean-contrib.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/tesujimath/limabean-contrib.git</developerConnection>
-    <tag>0.1.0-SNAPSHOT</tag>
+    <tag>0.1.0</tag>
   </scm>
 </project>
