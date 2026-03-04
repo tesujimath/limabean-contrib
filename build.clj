@@ -2,8 +2,6 @@
   (:refer-clojure :exclude [test])
   (:require [clojure.tools.build.api :as b]
             [clojure.java.io :as io]
-            [clojure.java.shell :as sh]
-            [cheshire.core :as cheshire]
             [deps-deploy.deps-deploy :as deps-deploy]))
 
 (def lib 'io.github.tesujimath/limabean-contrib)
