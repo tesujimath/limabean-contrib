@@ -9,7 +9,7 @@
         units (or (:units config) 100.00M)
         cur (or (:cur config) "NZD")]
     (fn [rf]
-      (let [state (volatile! {:acc acc})]
+      (let [magic-acc-opened (volatile! false)]
         (fn
           ;; init
           ([] (rf))
@@ -18,13 +18,14 @@
           ;; step
           ([result d]
            (if (= (:dct d) :open)
-             (do (when (:acc @state)
-                   ;; open magic equity account on first open
+             (do (when-not @magic-acc-opened
+                   ;; emit an open directive for the magic equity account
+                   ;; before the first open
                    (rf result {:date (:date d), :dct :open, :acc acc})
-                   (vreset! state (dissoc @state :acc)))
-                 ;; original open
+                   (vreset! magic-acc-opened true))
+                 ;; emit the original open
                  (rf result d)
-                 ;; magic money transaction
+                 ;; emit the magic money transaction
                  (rf result
                      {:date (:date d),
                       :dct :txn,
@@ -33,4 +34,5 @@
                                   :units units,
                                   :cur cur,
                                   :payee "magical benefactor"}]}))
+             ;; otherwise emit the original directive, whatever it was
              (rf result d))))))))
