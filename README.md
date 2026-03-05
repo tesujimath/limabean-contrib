@@ -10,21 +10,18 @@ Contributions of new plugins are very welcome.  Please provide a test for each, 
 
 Each plugin has its tests in a subdirectory of [plugin-tests](plugin-tests).  At least two tests are expected: with and without config.  Additional tests are welcome, but not required.
 
-To avoid a dependency on the limabean-pod Rust binary from limabean, test data is created offline by running a local copy of `limabean-pod`, and formatted uniformly using `zprint`.  Each test, therefore, should be created from a `.beancount` file, for example:
+To avoid a dependency on the limabean-pod Rust binary from limabean, test data is created offline by running a local copy of `limabean-pod`, and formatted uniformly using `zprint`.  Each test, therefore, is created from a `.beancount` file.  To create the necessary test input and golden output files, run the following command, which required `limabean-pod` to be on the path.
 
 ```
-kiri> limabean-pod book -f edn ./plugin-tests/example-magic-money/with-config.beancount | zprint >./plugin-tests/example-magic-money/with-config.edn
+kiri> clojure -T:build create-plugin-tests
 ```
 
-Then, to generate the golden output:
-
+To force all test input and golden output files to be regenerated:
 ```
-kiri> limabean --beanfile ./plugin-tests/example-magic-money/with-config.beancount --eval '(println *directives*)' | zprint >./plugin-tests/example-magic-money/with-config.golden/directives.edn
+clojure -T:build create-plugin-tests '{:force true}'
 ```
 
 For this to work smoothly with correct formatting of Java `LocalDate` objects, use limabean at least version 0.3.2.
-
-With apologies that this is currently rather cumbersome.
 
 To verify all tests are passing:
 

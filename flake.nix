@@ -4,6 +4,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+
+    limabean = {
+      url = "github:tesujimath/limabean";
+      # url = "github:tesujimath/limabean?ref=refs/tags/0.2.3";
+      # url = "github:tesujimath/limabean?ref=refs/heads/plugin-contrib-support";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -12,6 +19,10 @@
         let
           pkgs = import inputs.nixpkgs {
             inherit system;
+          };
+
+          flakePkgs = {
+            limabean = inputs.limabean.packages.${system}.default;
           };
 
           ci-packages = with pkgs; [
@@ -28,7 +39,9 @@
         with pkgs;
         {
           devShells.default = mkShell {
-            nativeBuildInputs = ci-packages;
+            nativeBuildInputs = [
+              flakePkgs.limabean
+            ] ++ ci-packages;
           };
         }
       );

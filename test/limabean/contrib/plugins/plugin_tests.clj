@@ -48,7 +48,8 @@
     (println "plugin test" plugin name beanfile golden-output)
     (testing (str plugin "/" name)
       (when (.exists golden-output)
-        (let [beans (plugins/resolve-external (beanfile/read-edn-string
+        (let [_ (println "golden-output" (slurp golden-output))
+              beans (plugins/resolve-external (beanfile/read-edn-string
                                                 (slurp beanfile)))
               expected (beanfile/read-edn-string (slurp golden-output))
               directives (plugins/run-booked-xf (:directives beans)

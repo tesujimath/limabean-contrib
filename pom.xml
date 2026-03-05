@@ -13,39 +13,14 @@
       <version>1.11.1</version>
     </dependency>
     <dependency>
-      <groupId>org.clojure</groupId>
-      <artifactId>tools.cli</artifactId>
-      <version>1.1.230</version>
-    </dependency>
-    <dependency>
       <groupId>clojure.java-time</groupId>
       <artifactId>clojure.java-time</artifactId>
       <version>1.4.3</version>
     </dependency>
     <dependency>
       <groupId>org.clojure</groupId>
-      <artifactId>data.csv</artifactId>
-      <version>1.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>cheshire</groupId>
-      <artifactId>cheshire</artifactId>
-      <version>6.1.0</version>
-    </dependency>
-    <dependency>
-      <groupId>io.forward</groupId>
-      <artifactId>yaml</artifactId>
-      <version>1.0.11</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.datatype</groupId>
-      <artifactId>jackson-datatype-jsr310</artifactId>
-      <version>2.18.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.taoensso</groupId>
-      <artifactId>telemere</artifactId>
-      <version>1.2.1</version>
+      <artifactId>tools.cli</artifactId>
+      <version>1.1.230</version>
     </dependency>
   </dependencies>
   <build>
