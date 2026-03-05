@@ -21,7 +21,6 @@
             just
 
             clojure
-            neil
             git
           ];
 
@@ -29,9 +28,7 @@
         with pkgs;
         {
           devShells.default = mkShell {
-            nativeBuildInputs = [
-              jre
-            ] ++ ci-packages;
+            nativeBuildInputs = ci-packages;
           };
         }
       );
