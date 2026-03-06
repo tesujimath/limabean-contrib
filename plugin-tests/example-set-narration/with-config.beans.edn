@@ -19,5 +19,6 @@
            :name-income "Income",
            :name-liabilities "Liabilities"},
  :plugins {:external [{:config "{:narration \"Plugins rule ok!\"}",
-                       :name "limabean.test.plugins.set-narration"}],
+                       :name
+                         "limabean.contrib.plugins.examples.set-narration"}],
            :internal []}}

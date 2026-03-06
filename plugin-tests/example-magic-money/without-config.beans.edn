@@ -18,6 +18,5 @@
            :name-expenses "Expenses",
            :name-income "Income",
            :name-liabilities "Liabilities"},
- :plugins {:external [{:name
-                         "limabean.contrib.plugins.examples.set-narration"}],
+ :plugins {:external [{:name "limabean.contrib.plugins.examples.magic-money"}],
            :internal []}}

@@ -1,20 +1,20 @@
-[{:acc "Equity:Rich-American-Uncle", :date #time/date "2016-03-01", :dct :open}
+[{:acc "Equity:Magic", :date #time/date "2016-03-01", :dct :open}
  {:acc "Assets:Bank:Current", :date #time/date "2016-03-01", :dct :open}
  {:date #time/date "2016-03-01",
   :dct :txn,
-  :postings [{:acc "Equity:Rich-American-Uncle", :cur "USD", :units -1000.00M}
+  :postings [{:acc "Equity:Magic", :cur "NZD", :units -100.00M}
              {:acc "Assets:Bank:Current",
-              :cur "USD",
+              :cur "NZD",
               :payee "magical benefactor",
-              :units 1000.00M}]}
+              :units 100.00M}]}
  {:acc "Expenses:Groceries", :date #time/date "2016-03-01", :dct :open}
  {:date #time/date "2016-03-01",
   :dct :txn,
-  :postings [{:acc "Equity:Rich-American-Uncle", :cur "USD", :units -1000.00M}
+  :postings [{:acc "Equity:Magic", :cur "NZD", :units -100.00M}
              {:acc "Expenses:Groceries",
-              :cur "USD",
+              :cur "NZD",
               :payee "magical benefactor",
-              :units 1000.00M}]}
+              :units 100.00M}]}
  {:date #time/date "2023-05-29",
   :dct :txn,
   :flag "*",

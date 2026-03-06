@@ -1,4 +1,4 @@
-plugin "limabean.test.plugins.set-narration"
+plugin "limabean.contrib.plugins.examples.set-narration"
 
 2016-03-01 open Assets:Bank:Current
 

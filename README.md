@@ -2,9 +2,20 @@
 
 A supplementary package for [limabean](https://github.com/tesujimath/limabean/blob/main/README.md) which welcomes contributions, in particular [plugins](https://github.com/tesujimath/limabean/blob/main/clj/doc/40-plugins.md).
 
+## Plugins
+
++ [example-magic-money](doc/example-magic-money.md) - stateful transducer example
++ [example-set-narration](doc/example-set-narration.md) - simplest possible example plugin
+
 ## Contributing
 
-Contributions of new plugins are very welcome.  Please provide a test for each, ideally with and without config.
+Contributions of new plugins are very welcome.  Steps to take:
+
+1. Write and test your plugin
+2. Add a full description in the [docs](doc), and link to it from the list above
+3. Add a test, as below
+
+A plugin is simply a [Clojure transducer](https://clojure.org/reference/transducers).  The function which creates the transducer takes two parameters: the `config` supplied in the beanfile (or `nil` if none), and the `options` extracted from the beanfile, as made available in the REPL as `*options*`.
 
 ### Tests
 
@@ -28,6 +39,12 @@ To verify all tests are passing:
 ```
 kiri> clojure -X:test
 ```
+
+## Booked vs Raw plugins
+
+For now, only plugins which operate on the fully resolved booked directives are supported.  These implement the function `booked-xf`.
+
+Work is underway to add support for plugins which operate on the raw directives before validation.
 
 ## License
 
