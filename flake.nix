@@ -4,6 +4,13 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+
+    limabean = {
+      url = "github:tesujimath/limabean?ref=refs/tags/0.3.2";
+      # url = "github:tesujimath/limabean";
+      # url = "github:tesujimath/limabean?ref=refs/heads/plugin-contrib-support";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs:
@@ -14,6 +21,10 @@
             inherit system;
           };
 
+          flakePkgs = {
+            limabean = inputs.limabean.packages.${system}.default;
+          };
+
           ci-packages = with pkgs; [
             bashInteractive
             coreutils
@@ -21,7 +32,6 @@
             just
 
             clojure
-            neil
             git
           ];
 
@@ -30,7 +40,7 @@
         {
           devShells.default = mkShell {
             nativeBuildInputs = [
-              jre
+              flakePkgs.limabean
             ] ++ ci-packages;
           };
         }

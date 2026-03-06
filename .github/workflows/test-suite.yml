@@ -1,0 +1,49 @@
+name: test-suite
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  nix-tests:
+    name: Run nix tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v30
+
+      - name: Check Nix Flake
+        run: |
+          nix flake check
+
+  cross-platform-tests:
+    name: Run tests on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Clojure
+        uses: DeLaGuardo/setup-clojure@13
+        with:
+          cli: latest
+
+      - name: Clojure tests
+        shell: bash
+        run: |
+          clojure -X:test
+
+      - name: Check Clojure pom.xml
+        if: matrix.os == 'ubuntu-latest'
+        run: |
+          clojure -T:build write-pom
+          git diff --exit-code pom.xml
