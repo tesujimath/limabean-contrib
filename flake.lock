@@ -86,26 +86,27 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1772678815,
-        "narHash": "sha256-zIX8HVQcygqygZI0+9APGJh4gvZrAO5OOpnu5/+3aao=",
+        "lastModified": 1772762066,
+        "narHash": "sha256-IFe/uRF57HypNIIF+YJ4VuGaZusrrLxcgtDicHLb/j4=",
         "owner": "tesujimath",
         "repo": "limabean",
-        "rev": "e2dc94497ba7edba0abeeb565c5cc3f1ed9f75d1",
+        "rev": "1508f780b246e2e4f7f0d0f930a84784cd608039",
         "type": "github"
       },
       "original": {
         "owner": "tesujimath",
+        "ref": "refs/tags/0.3.2",
         "repo": "limabean",
         "type": "github"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1772419343,
-        "narHash": "sha256-QU3Cd5DJH7dHyMnGEFfPcZDaCAsJQ6tUD+JuUsYqnKU=",
+        "lastModified": 1772674223,
+        "narHash": "sha256-/suKbHSaSmuC9UY7G0VRQ3aO+QKqxAQPQ19wG7QNkF8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "93178f6a00c22fcdee1c6f5f9ab92f2072072ea9",
+        "rev": "66d9241e3dc2296726dc522e62dbfe89c7b449f3",
         "type": "github"
       },
       "original": {
