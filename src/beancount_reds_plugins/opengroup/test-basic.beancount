@@ -1,0 +1,4 @@
+plugin "beancount-reds-plugins.opengroup.opengroup"
+
+2000-01-01 open Assets:Investments:Taxable:Midelity PARENT
+  opengroup_commodity_leaves_income: "ABC,DEFGH"

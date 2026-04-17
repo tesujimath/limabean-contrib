@@ -48,9 +48,9 @@ Work is underway to add support for plugins which operate on the raw directives 
 
 ## License
 
-Copyright © 2025-26 Simon Guest
+Copyright © 2025-26 Simon Guest, except as otherwise indicated on individual plugins.
 
-Licensed under either of
+Unless otherwise stated, licensed under either of
 
  * Apache License, Version 2.0
    [LICENSE-APACHE](http://www.apache.org/licenses/LICENSE-2.0)
@@ -58,3 +58,5 @@ Licensed under either of
    [LICENSE-MIT](http://opensource.org/licenses/MIT)
 
 at your option.
+
+Individual plugins may have different licenses, for example where these are derived works of original Beancount plugins.

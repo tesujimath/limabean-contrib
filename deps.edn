@@ -30,5 +30,6 @@
            :main-opts ["-m" "cognitect.test-runner"]}},
  :deps {clojure.java-time/clojure.java-time {:mvn/version "1.4.3"},
         org.clojure/clojure {:mvn/version "1.11.1"},
-        org.clojure/tools.cli {:mvn/version "1.1.230"}},
+        org.clojure/tools.cli {:mvn/version "1.1.230"},
+        selmer/selmer {:mvn/version "1.13.1"}},
  :paths ["src" "resources"]}
