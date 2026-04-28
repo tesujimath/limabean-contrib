@@ -19,32 +19,25 @@ A plugin is simply a [Clojure transducer](https://clojure.org/reference/transduc
 
 ### Tests
 
-Each plugin has its tests in a subdirectory of [plugin-tests](plugin-tests).  At least two tests are expected: with and without config.  Additional tests are welcome, but not required.
+Each plugin has its tests alongside the plugin, and will be found be the test runner.  At least two tests are expected: with and without config.  Additional tests are welcome, but not required.
 
-To avoid a dependency on the limabean-pod Rust binary from limabean, test data is created offline by running a local copy of `limabean-pod`, and formatted uniformly using `zprint`.  Each test, therefore, is created from a `.beancount` file.  To create the necessary test input and golden output files, run the following command, which required `limabean-pod` to be on the path.
+Each test comprises a Beancount file together with a sibling golden output directory containing expected test output in EDN format.  The test runner will find all such pairs and run the tests.
+
+Running of the tests does require the supplementary excutable `limabean-pod` to be on the path, for parsing of Beancount files.
+
+Golden output files may be re-written using the following command.  Note that `raw-xf-directives.edn` is written only when there are raw plugins.
 
 ```
-kiri> clojure -T:build create-plugin-tests
+kiri> clojure -X:gen-golden
 ```
 
-To force all test input and golden output files to be regenerated:
-```
-clojure -T:build create-plugin-tests '{:force true}'
-```
-
-For this to work smoothly with correct formatting of Java `LocalDate` objects, use limabean at least version 0.3.2.
+which requires at least limabean 0.4.2
 
 To verify all tests are passing:
 
 ```
 kiri> clojure -X:test
 ```
-
-## Booked vs Raw plugins
-
-For now, only plugins which operate on the fully resolved booked directives are supported.  These implement the function `booked-xf`.
-
-Work is underway to add support for plugins which operate on the raw directives before validation.
 
 ## License
 

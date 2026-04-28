@@ -29,6 +29,7 @@
                  (rf result
                      {:date (:date d),
                       :dct :txn,
+                      :flag "*",
                       :postings [{:acc acc, :units (- units), :cur cur}
                                  {:acc (:acc d),
                                   :units units,

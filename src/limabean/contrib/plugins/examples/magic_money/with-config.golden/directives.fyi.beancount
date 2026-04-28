@@ -1,0 +1,21 @@
+2016-03-01 open Equity:Rich-American-Uncle
+
+2016-03-01 open Assets:Bank:Current
+
+2016-03-01 *
+  Equity:Rich-American-Uncle -1000.00 USD
+  Assets:Bank:Current 1000.00 USD
+
+2016-03-01 open Expenses:Groceries
+
+2016-03-01 *
+  Equity:Rich-American-Uncle -1000.00 USD
+  Expenses:Groceries 1000.00 USD
+
+2023-05-29 * "New World" ""
+  Expenses:Groceries 10.00 NZD
+  Assets:Bank:Current -10.00 NZD
+
+2023-05-30 * "Countdown" ""
+  Expenses:Groceries 17.50 NZD
+  Assets:Bank:Current -17.50 NZD

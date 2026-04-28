@@ -2,8 +2,7 @@
   (:refer-clojure :exclude [test])
   (:require [clojure.tools.build.api :as b]
             [clojure.java.io :as io]
-            [deps-deploy.deps-deploy :as deps-deploy]
-            [build.plugins]))
+            [deps-deploy.deps-deploy :as deps-deploy]))
 
 (def lib 'io.github.tesujimath/limabean-contrib)
 (def version "0.1.1")
@@ -110,5 +109,3 @@
                            :artifact artifact,
                            :pom-file pom-file}))
     opts))
-
-(defn create-plugin-tests [opts] (build.plugins/create-tests opts) opts)

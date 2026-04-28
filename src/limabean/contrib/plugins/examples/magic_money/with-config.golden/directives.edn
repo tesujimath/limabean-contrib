@@ -1,20 +1,27 @@
-[{:acc "Equity:Rich-American-Uncle", :date #time/date "2016-03-01", :dct :open}
+[{:acc "Equity:Rich-American-Uncle",
+  :date #time/date "2016-03-01",
+  :dct :open,
+  :provenance ["limabean.contrib.plugins.examples.magic-money"]}
  {:acc "Assets:Bank:Current", :date #time/date "2016-03-01", :dct :open}
  {:date #time/date "2016-03-01",
   :dct :txn,
+  :flag "*",
   :postings [{:acc "Equity:Rich-American-Uncle", :cur "USD", :units -1000.00M}
              {:acc "Assets:Bank:Current",
               :cur "USD",
               :payee "magical benefactor",
-              :units 1000.00M}]}
+              :units 1000.00M}],
+  :provenance ["limabean.contrib.plugins.examples.magic-money"]}
  {:acc "Expenses:Groceries", :date #time/date "2016-03-01", :dct :open}
  {:date #time/date "2016-03-01",
   :dct :txn,
+  :flag "*",
   :postings [{:acc "Equity:Rich-American-Uncle", :cur "USD", :units -1000.00M}
              {:acc "Expenses:Groceries",
               :cur "USD",
               :payee "magical benefactor",
-              :units 1000.00M}]}
+              :units 1000.00M}],
+  :provenance ["limabean.contrib.plugins.examples.magic-money"]}
  {:date #time/date "2023-05-29",
   :dct :txn,
   :flag "*",
