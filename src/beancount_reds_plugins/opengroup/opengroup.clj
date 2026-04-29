@@ -66,7 +66,7 @@
                       (let [[acc cur] (map #(selmer/render % g) insert)]
                         (assoc (select-keys dct [:dct :date])
                           :acc acc
-                          :cur cur
+                          :currencies #{cur}
                           :metadata {:auto nil})))
                  inserts))))
       (plugin/error! dct (str "rule " rulename " not found in " source)))))
