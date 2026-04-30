@@ -1,0 +1,41 @@
+[{:acc "Assets:Investments:Taxable:Midelity",
+  :currencies #{"PARENT"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:opengroup_commodity_leaves_income {:string "ABC,DEFGH"}}}
+ {:acc "Income:Investments:Taxable:Capital-Gains:Midelity:ABC",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}
+ {:acc "Income:Investments:Taxable:Dividends:Midelity:ABC",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}
+ {:acc "Income:Investments:Taxable:Interest:Midelity:ABC",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}
+ {:acc "Income:Investments:Taxable:Capital-Gains:Midelity:DEFGH",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}
+ {:acc "Income:Investments:Taxable:Dividends:Midelity:DEFGH",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}
+ {:acc "Income:Investments:Taxable:Interest:Midelity:DEFGH",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}]

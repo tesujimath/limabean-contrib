@@ -2,11 +2,10 @@
   (:refer-clojure :exclude [test])
   (:require [clojure.tools.build.api :as b]
             [clojure.java.io :as io]
-            [deps-deploy.deps-deploy :as deps-deploy]
-            [build.plugins]))
+            [deps-deploy.deps-deploy :as deps-deploy]))
 
 (def lib 'io.github.tesujimath/limabean-contrib)
-(def version "0.1.1")
+(def version "0.2.0-SNAPSHOT")
 (def main 'limabean.contrib.main)
 (def class-dir "target/classes")
 ;; mvn-local-repo must be an absolute path outside of clj
@@ -110,5 +109,3 @@
                            :artifact artifact,
                            :pom-file pom-file}))
     opts))
-
-(defn create-plugin-tests [opts] (build.plugins/create-tests opts) opts)

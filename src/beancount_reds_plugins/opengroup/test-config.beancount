@@ -1,0 +1,4 @@
+plugin "beancount-reds-plugins.opengroup.opengroup" "{\"my_accounts\"[#regex \"(?<root>[^:]*):(?<subroot>[^:]*):(?<taxability>[^:]*):(?<accountname>.*)\"[[\"{{f_acct}}:{{f_ticker}}\" \"{{f_opcurr}}\"] [\"Expenses:My-stuff:{{taxability}}:{{accountname}}\" \"{{f_opcurr}}\"] ] ] }"
+
+2000-01-01 open Assets:Investments:Taxable:Midelity PARENT
+  opengroup_my_accounts: "ABC"

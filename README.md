@@ -19,20 +19,20 @@ A plugin is simply a [Clojure transducer](https://clojure.org/reference/transduc
 
 ### Tests
 
-Each plugin has its tests in a subdirectory of [plugin-tests](plugin-tests).  At least two tests are expected: with and without config.  Additional tests are welcome, but not required.
+Each plugin has its tests alongside the plugin, and will be found be the test runner.  At least two tests are expected: with and without config.  Additional tests are welcome, but not required.
 
-To avoid a dependency on the limabean-pod Rust binary from limabean, test data is created offline by running a local copy of `limabean-pod`, and formatted uniformly using `zprint`.  Each test, therefore, is created from a `.beancount` file.  To create the necessary test input and golden output files, run the following command, which required `limabean-pod` to be on the path.
+Each test comprises a Beancount file together with a sibling golden output directory containing expected test output in EDN format.  The test runner will find all such pairs and run the tests.
+
+Running of the tests does require the supplementary executable `limabean-pod` to be on the path, for parsing of Beancount files.
+
+Tests comprise a Beancount file and a golden directory as siblings.  Once these exist,
+golden output files may be created or updated using the following command.
 
 ```
-kiri> clojure -T:build create-plugin-tests
+kiri> clojure -X:gen-golden
 ```
 
-To force all test input and golden output files to be regenerated:
-```
-clojure -T:build create-plugin-tests '{:force true}'
-```
-
-For this to work smoothly with correct formatting of Java `LocalDate` objects, use limabean at least version 0.3.2.
+which requires at least limabean 0.4.2
 
 To verify all tests are passing:
 
@@ -40,17 +40,11 @@ To verify all tests are passing:
 kiri> clojure -X:test
 ```
 
-## Booked vs Raw plugins
-
-For now, only plugins which operate on the fully resolved booked directives are supported.  These implement the function `booked-xf`.
-
-Work is underway to add support for plugins which operate on the raw directives before validation.
-
 ## License
 
-Copyright © 2025-26 Simon Guest
+Copyright © 2025-26 Simon Guest, except as otherwise indicated on individual plugins.
 
-Licensed under either of
+Unless otherwise stated, licensed under either of
 
  * Apache License, Version 2.0
    [LICENSE-APACHE](http://www.apache.org/licenses/LICENSE-2.0)
@@ -58,3 +52,5 @@ Licensed under either of
    [LICENSE-MIT](http://opensource.org/licenses/MIT)
 
 at your option.
+
+Individual plugins may have different licenses, for example where these are derived works of original Beancount plugins.
