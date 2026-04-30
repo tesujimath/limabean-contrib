@@ -23,9 +23,10 @@ Each plugin has its tests alongside the plugin, and will be found be the test ru
 
 Each test comprises a Beancount file together with a sibling golden output directory containing expected test output in EDN format.  The test runner will find all such pairs and run the tests.
 
-Running of the tests does require the supplementary excutable `limabean-pod` to be on the path, for parsing of Beancount files.
+Running of the tests does require the supplementary executable `limabean-pod` to be on the path, for parsing of Beancount files.
 
-Golden output files may be re-written using the following command.  Note that `raw-xf-directives.edn` is written only when there are raw plugins.
+Tests comprise a Beancount file and a golden directory as siblings.  Once these exist,
+golden output files may be created or updated using the following command.
 
 ```
 kiri> clojure -X:gen-golden

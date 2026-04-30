@@ -1,5 +1,5 @@
 2000-01-01 open Assets:Investments:Taxable:Midelity PARENT
-  opengroup_commodity_leaves_income: "ABC,DEFGH"
+  opengroup_commodity_leaves_income: "ABC"
 
 2000-01-01 open Income:Investments:Taxable:Capital-Gains:Midelity:ABC USD
   auto:
@@ -8,13 +8,4 @@
   auto:
 
 2000-01-01 open Income:Investments:Taxable:Interest:Midelity:ABC USD
-  auto:
-
-2000-01-01 open Income:Investments:Taxable:Capital-Gains:Midelity:DEFGH USD
-  auto:
-
-2000-01-01 open Income:Investments:Taxable:Dividends:Midelity:DEFGH USD
-  auto:
-
-2000-01-01 open Income:Investments:Taxable:Interest:Midelity:DEFGH USD
   auto:

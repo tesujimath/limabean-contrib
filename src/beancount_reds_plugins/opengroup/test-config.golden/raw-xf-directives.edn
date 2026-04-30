@@ -1,0 +1,17 @@
+[{:acc "Assets:Investments:Taxable:Midelity",
+  :currencies #{"PARENT"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:opengroup_my_accounts {:string "ABC"}}}
+ {:acc "Assets:Investments:Taxable:Midelity:ABC",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}
+ {:acc "Expenses:My-stuff:Taxable:Midelity",
+  :currencies #{"USD"},
+  :date #time/date "2000-01-01",
+  :dct :open,
+  :metadata {:auto nil},
+  :provenance ["beancount-reds-plugins.opengroup.opengroup"]}]

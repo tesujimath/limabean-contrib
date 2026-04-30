@@ -13,21 +13,21 @@
    "commodity_leaves_income"
      [; Open common set of investment accounts with commodity leaves
       #"(?<root>[^:]*):(?<subroot>[^:]*):(?<taxability>[^:]*):(?<accountname>.*)"
-      [["Income:{{subroot}}:{{taxability}}:Dividends:{{accountname}}:{{f_ticker}}"
+      [["Income:{{subroot}}:{{taxability}}:Capital-Gains:{{accountname}}:{{f_ticker}}"
+        "{{f_opcurr}}"]
+       ["Income:{{subroot}}:{{taxability}}:Dividends:{{accountname}}:{{f_ticker}}"
         "{{f_opcurr}}"]
        ["Income:{{subroot}}:{{taxability}}:Interest:{{accountname}}:{{f_ticker}}"
-        "{{f_opcurr}}"]
-       ["Income:{{subroot}}:{{taxability}}:Capital-Gains:{{accountname}}:{{f_ticker}}"
         "{{f_opcurr}}"]]],
    "commodity_leaves_income_and_asset"
      [; Open commodity_leaves_income + asset account for the ticker
       #"(?<root>[^:]*):(?<subroot>[^:]*):(?<taxability>[^:]*):(?<accountname>.*)"
       [["{{f_acct}}:{{f_ticker}}" "{{f_ticker}}"]
+       ["Income:{{subroot}}:{{taxability}}:Capital-Gains:{{accountname}}:{{f_ticker}}"
+        "{{f_opcurr}}"]
        ["Income:{{subroot}}:{{taxability}}:Dividends:{{accountname}}:{{f_ticker}}"
         "{{f_opcurr}}"]
        ["Income:{{subroot}}:{{taxability}}:Interest:{{accountname}}:{{f_ticker}}"
-        "{{f_opcurr}}"]
-       ["Income:{{subroot}}:{{taxability}}:Capital-Gains:{{accountname}}:{{f_ticker}}"
         "{{f_opcurr}}"]]],
    "commodity_leaves_cgdists" ; Open capital gains distributions accounts
      [#"(?<root>[^:]*):(?<subroot>[^:]*):(?<taxability>[^:]*):(?<accountname>.*)"
