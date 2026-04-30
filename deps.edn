@@ -20,7 +20,7 @@
           :extra-paths ["dev"],
           :main-opts ["-m" "user"]},
     :gen-golden {:exec-args {:root-dir "src"},
-                 :exec-fn limabean.test.create-golden/update,
+                 :exec-fn limabean.test.create-golden/update-all,
                  :extra-deps {io.github.tesujimath/limabean-test
                                 {:mvn/version "0.4.2-SNAPSHOT"},
                               zprint/zprint {:mvn/version "1.3.0"}}},

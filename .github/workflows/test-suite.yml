@@ -37,6 +37,11 @@ jobs:
         with:
           cli: latest
 
+      - name: Install latest limabean binaries from crates.io
+        shell: bash
+        run: |
+          cargo install limabean
+
       - name: Clojure tests
         shell: bash
         run: |
