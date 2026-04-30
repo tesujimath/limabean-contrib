@@ -4,7 +4,16 @@ All notable changes to this project will be documented in this file. This change
 
 ## [Unreleased]
 
-[commit log]: https://github.com/tesujimath/limabean/compare/0.1.1...HEAD
+[commit log]: https://github.com/tesujimath/limabean/compare/0.2.0...HEAD
+
+## [0.2.0] - 2026-04-30
+
+### Added
+
+- opengroup plugin
+- use limabean plugin testing framework
+
+[commit log]: https://github.com/tesujimath/limabean/compare/0.1.1...0.2.0
 
 ## [0.1.1] - 2026-03-06
 
