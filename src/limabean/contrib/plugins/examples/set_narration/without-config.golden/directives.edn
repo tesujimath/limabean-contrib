@@ -1,18 +1,52 @@
-[{:acc "Assets:Bank:Current", :date #time/date "2016-03-01", :dct :open}
- {:acc "Expenses:Groceries", :date #time/date "2016-03-01", :dct :open}
+[{:acc "Assets:Bank:Current",
+  :date #time/date "2016-03-01",
+  :dct :open,
+  :idx 0,
+  :span [0 58 95]}
+ {:acc "Expenses:Groceries",
+  :date #time/date "2016-03-01",
+  :dct :open,
+  :idx 1,
+  :span [0 95 131]}
  {:date #time/date "2023-05-29",
   :dct :txn,
   :flag "*",
+  :idx 2,
   :narration "unspecified in config",
   :payee "New World",
-  :postings [{:acc "Expenses:Groceries", :cur "NZD", :units 10.00M}
-             {:acc "Assets:Bank:Current", :cur "NZD", :units -10.00M}],
-  :provenance ["limabean.contrib.plugins.examples.set-narration"]}
+  :postings [{:acc "Expenses:Groceries",
+              :cur "NZD",
+              :idx 0,
+              :span [0 161 190],
+              :span-p [1 48 79],
+              :units 10.00M}
+             {:acc "Assets:Bank:Current",
+              :cur "NZD",
+              :idx 1,
+              :span [0 193 212],
+              :span-p [1 79 112],
+              :units -10.00M}],
+  :provenance [:booked "limabean.contrib.plugins.examples.set-narration"],
+  :span [0 131 214],
+  :span-p [1 0 48]}
  {:date #time/date "2023-05-30",
   :dct :txn,
   :flag "*",
+  :idx 3,
   :narration "unspecified in config",
   :payee "Countdown",
-  :postings [{:acc "Expenses:Groceries", :cur "NZD", :units 17.50M}
-             {:acc "Assets:Bank:Current", :cur "NZD", :units -17.50M}],
-  :provenance ["limabean.contrib.plugins.examples.set-narration"]}]
+  :postings [{:acc "Expenses:Groceries",
+              :cur "NZD",
+              :idx 0,
+              :span [0 244 273],
+              :span-p [1 160 191],
+              :units 17.50M}
+             {:acc "Assets:Bank:Current",
+              :cur "NZD",
+              :idx 1,
+              :span [0 276 295],
+              :span-p [1 191 224],
+              :units -17.50M}],
+  :provenance [:booked "limabean.contrib.plugins.examples.set-narration"],
+  :span [0 214 296],
+  :span-p [1 112 160]}]

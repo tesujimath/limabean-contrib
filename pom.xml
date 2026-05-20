@@ -30,7 +30,7 @@
     <dependency>
       <groupId>io.github.tesujimath</groupId>
       <artifactId>limabean</artifactId>
-      <version>0.5.1</version>
+      <version>0.6.0</version>
     </dependency>
   </dependencies>
   <build>

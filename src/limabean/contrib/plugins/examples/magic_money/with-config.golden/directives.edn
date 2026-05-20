@@ -1,36 +1,75 @@
 [{:acc "Equity:Rich-American-Uncle",
   :date #time/date "2016-03-01",
   :dct :open,
-  :provenance ["limabean.contrib.plugins.examples.magic-money"]}
- {:acc "Assets:Bank:Current", :date #time/date "2016-03-01", :dct :open}
+  :provenance [:booked "limabean.contrib.plugins.examples.magic-money"],
+  :span-p [1 0 43]}
+ {:acc "Assets:Bank:Current",
+  :date #time/date "2016-03-01",
+  :dct :open,
+  :idx 0,
+  :span [0 181 218]}
  {:date #time/date "2016-03-01",
   :dct :txn,
   :flag "*",
-  :postings [{:acc "Equity:Rich-American-Uncle", :cur "USD", :units -1000.00M}
+  :postings [{:acc "Equity:Rich-American-Uncle",
+              :cur "USD",
+              :span-p [1 55 97],
+              :units -1000.00M}
              {:acc "Assets:Bank:Current",
               :cur "USD",
               :payee "magical benefactor",
+              :span-p [1 97 131],
               :units 1000.00M}],
-  :provenance ["limabean.contrib.plugins.examples.magic-money"]}
- {:acc "Expenses:Groceries", :date #time/date "2016-03-01", :dct :open}
+  :provenance [:booked "limabean.contrib.plugins.examples.magic-money"],
+  :span-p [1 43 55]}
+ {:acc "Expenses:Groceries",
+  :date #time/date "2016-03-01",
+  :dct :open,
+  :idx 1,
+  :span [0 218 254]}
  {:date #time/date "2016-03-01",
   :dct :txn,
   :flag "*",
-  :postings [{:acc "Equity:Rich-American-Uncle", :cur "USD", :units -1000.00M}
+  :postings [{:acc "Equity:Rich-American-Uncle",
+              :cur "USD",
+              :span-p [1 143 185],
+              :units -1000.00M}
              {:acc "Expenses:Groceries",
               :cur "USD",
               :payee "magical benefactor",
+              :span-p [1 185 218],
               :units 1000.00M}],
-  :provenance ["limabean.contrib.plugins.examples.magic-money"]}
+  :provenance [:booked "limabean.contrib.plugins.examples.magic-money"],
+  :span-p [1 131 143]}
  {:date #time/date "2023-05-29",
   :dct :txn,
   :flag "*",
+  :idx 2,
   :payee "New World",
-  :postings [{:acc "Expenses:Groceries", :cur "NZD", :units 10.00M}
-             {:acc "Assets:Bank:Current", :cur "NZD", :units -10.00M}]}
+  :postings [{:acc "Expenses:Groceries",
+              :cur "NZD",
+              :idx 0,
+              :span [0 284 313],
+              :units 10.00M}
+             {:acc "Assets:Bank:Current",
+              :cur "NZD",
+              :idx 1,
+              :span [0 316 335],
+              :units -10.00M}],
+  :span [0 254 337]}
  {:date #time/date "2023-05-30",
   :dct :txn,
   :flag "*",
+  :idx 3,
   :payee "Countdown",
-  :postings [{:acc "Expenses:Groceries", :cur "NZD", :units 17.50M}
-             {:acc "Assets:Bank:Current", :cur "NZD", :units -17.50M}]}]
+  :postings [{:acc "Expenses:Groceries",
+              :cur "NZD",
+              :idx 0,
+              :span [0 367 396],
+              :units 17.50M}
+             {:acc "Assets:Bank:Current",
+              :cur "NZD",
+              :idx 1,
+              :span [0 399 418],
+              :units -17.50M}],
+  :span [0 337 419]}]
