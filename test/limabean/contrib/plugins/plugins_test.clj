@@ -4,4 +4,4 @@
 
 (def PLUGIN-TEST-ROOT "src")
 
-(deftest plugin-tests (limabean.test/loader-tests PLUGIN-TEST-ROOT))
+(deftest plugin-tests (limabean.test/api-tests PLUGIN-TEST-ROOT))
